@@ -62,11 +62,21 @@ function draw() {
 
 function geraRecomendacao(idade, gostaDeFiccao, gostaDeDrama, gostaDeAventura, gostaDeComedia, gostaDeAcao, gostaDeLGBT, gostaDeRomance, gostaDeTerror, gostaDeFantasia, gostaDeAnimacao, gostaDeMisterio, gostaDeThriller) {
   if (idade >= 18) {
-    if (gostaDeComedia || gostaDeLGBT) return "Bottoms";
-    if (gostaDeLGBT || gostaDeThriller) return "Saltburn";
+    if (gostaDeComedia) return "Bottoms";
+    if (gostaDeLGBT) return "Saltburn";
     if (gostaDeRomance || gostaDeTerror) return "Até os Ossos";
+    if (gostaDeFiccao || gostaDeAventura) return "Duna";
+    if (gostaDeDrama || gostaDeAcao) return "S.O.S. Malibu";
+    if (gostaDeDrama || gostaDeMisterio || gostaDeThriller) return "Anatomia de uma Queda";
+    if (gostaDeAcao || gostaDeAventura || gostaDeFantasia) return "Tudo em todo lugar ao mesmo tempo";
+    if (gostaDeFiccao || gostaDeDrama) return "Nosso amigo extraordinário";
   } else if (idade >= 16) {
     if (gostaDeComedia) return "Que horas eu te pego";
+    if (gostaDeFiccao || gostaDeAventura) return "Duna";
+    if (gostaDeDrama || gostaDeAcao) return "S.O.S. Malibu";
+    if (gostaDeDrama || gostaDeMisterio || gostaDeThriller) return "Anatomia de uma Queda";
+    if (gostaDeAcao || gostaDeAventura || gostaDeFantasia) return "Tudo em todo lugar ao mesmo tempo";
+    if (gostaDeFiccao || gostaDeDrama) return "Nosso amigo extraordinário";
   } else if (idade >= 14) {
     if (gostaDeFiccao || gostaDeAventura) return "Duna";
     if (gostaDeDrama || gostaDeAcao) return "S.O.S. Malibu";
